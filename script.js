@@ -54,6 +54,9 @@ function drawConfetti() {
 function revealMessage() {
   envelopeStage.classList.add("hidden");
   setTimeout(() => {
+    envelopeStage.classList.add("collapsed");
+  }, 520);
+  setTimeout(() => {
     flowerStage.classList.remove("hidden");
   }, 480);
 }
