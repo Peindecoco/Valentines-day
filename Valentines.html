@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Valentine Mail</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <main class="scene">
+    <section class="envelope-stage" id="envelopeStage">
+      <button class="envelope" id="envelope" aria-label="Open valentine mail">
+        <span class="flap"></span>
+        <span class="letter-preview">Tap to open 💌</span>
+      </button>
+      <p class="hint">Open the mail for a surprise ✨</p>
+    </section>
+
+    <section class="flower-stage hidden" id="flowerStage">
+      <div class="flowers" aria-hidden="true">
+        <span>🌹</span><span>🌷</span><span>🌸</span><span>🌺</span><span>🌼</span>
+      </div>
+      <h1>Happy Valentine’s Day ❤️</h1>
+      <p>
+        You make every day bloom brighter. Thank you for filling my life with love,
+        laughter, and beautiful moments.
+      </p>
+      <div class="flowers" aria-hidden="true">
+        <span>💐</span><span>🌹</span><span>🌸</span><span>🌷</span><span>💐</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
