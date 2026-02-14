@@ -32,7 +32,7 @@ body {
 }
 
 .scene {
-  width: min(92vw, 760px);
+  width: min(92vw, 820px);
   text-align: center;
   position: relative;
   z-index: 10;
@@ -56,15 +56,11 @@ body {
   transform: translateZ(0);
 }
 
-.envelope::before,
-.envelope::after {
+.envelope::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 10px;
-}
-
-.envelope::before {
   clip-path: polygon(0 100%, 50% 56%, 100% 100%);
   background: #ffabc8;
 }
@@ -111,31 +107,71 @@ body {
 }
 
 .flower-stage {
-  max-width: 640px;
+  max-width: 720px;
   margin-inline: auto;
-  background: rgba(255, 255, 255, 0.45);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  border-radius: 20px;
-  padding: 2rem 1.4rem;
-  box-shadow: 0 14px 38px rgba(123, 37, 72, 0.14);
-}
-
-.flowers {
-  font-size: clamp(1.6rem, 3.6vw, 2.5rem);
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  margin: 0.5rem 0 1rem;
 }
 
 h1 {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0 1rem;
   font-size: clamp(1.9rem, 4.5vw, 3rem);
 }
 
-p {
-  margin: 0.7rem auto;
-  line-height: 1.6;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  max-width: 58ch;
+.bouquet {
+  width: min(90vw, 540px);
+  margin: 0 auto;
+  position: relative;
+  aspect-ratio: 1 / 1.1;
+  background: rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 40% 40% 46% 46% / 40% 40% 58% 58%;
+  box-shadow: 0 16px 36px rgba(123, 37, 72, 0.15);
+  overflow: hidden;
+}
+
+.flower {
+  position: absolute;
+  font-size: clamp(2rem, 4.8vw, 3rem);
+  filter: drop-shadow(0 4px 5px rgba(123, 37, 72, 0.2));
+}
+
+.f1 { top: 6%; left: 18%; }
+.f2 { top: 4%; left: 39%; }
+.f3 { top: 9%; right: 16%; }
+.f4 { top: 25%; left: 8%; }
+.f5 { top: 24%; right: 9%; }
+.f6 { top: 38%; left: 20%; }
+.f7 { top: 38%; right: 22%; }
+.f8 { top: 17%; left: 60%; }
+
+.letter-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(72%, 360px);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 250, 240, 0.95);
+  border-radius: 14px;
+  padding: 1rem 1rem 1.1rem;
+  border: 2px solid rgba(230, 50, 109, 0.25);
+  box-shadow: 0 10px 24px rgba(123, 37, 72, 0.18);
+  z-index: 3;
+}
+
+.letter-card h2 {
+  margin: 0.2rem 0 0.5rem;
+  color: var(--deep-pink);
+}
+
+.letter-card p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: clamp(0.96rem, 2.25vw, 1.1rem);
+}
+
+.wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
+  font-size: clamp(2.2rem, 4.8vw, 3rem);
 }
