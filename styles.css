@@ -124,6 +124,10 @@ body {
   pointer-events: none;
 }
 
+.collapsed {
+  display: none;
+}
+
 .flower-stage {
   max-width: 720px;
   margin-inline: auto;
